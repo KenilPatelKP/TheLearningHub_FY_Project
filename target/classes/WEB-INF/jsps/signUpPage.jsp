@@ -100,43 +100,44 @@
 <%@taglib prefix="sform" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="common/header.jsp" %>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/SignUp.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/SignUp.js"></script>
 <section class="u-clearfix u-gradient u-section-1" id="sec-fdd2">
     <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Sign Up</h1>
         <div class="u-form u-form-1">
-            <sform:form role="form" action="/user/create" method="POST" modelAttribute="previousUser" onsubmit="return validateForm()" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
+            <sform:form role="form" action="/user/create" method="POST" modelAttribute="previousUser" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px;">
+                <%--                onsubmit="return validateForm()"--%>
                 <div class="u-form-group u-form-name">
                     <label for="firstName" class="u-label">First Name</label>
-                                                    <sform:input type="text" cssClass="form-control input-sm" id="firstName" name="firstName" placeholder="First name"
-                                                           required="" style="max-width: 550px" path="firstName"/>
+                    <sform:input type="text" cssClass="form-control input-sm" id="firstName" name="firstName" placeholder="First name"
+                                 required="" style="max-width: 550px" path="firstName"/>
                 </div>
                 <div class="u-form-group">
                     <label for="lastName" class="u-label">Last Name</label>
-                                                    <sform:input type="text" cssClass="form-control input-sm" id="lastName" name="lastName" placeholder="Last name" required="" style="max-width: 550px" path="lastName"/>
+                    <sform:input type="text" cssClass="form-control input-sm" id="lastName" name="lastName" placeholder="Last name" required="" style="max-width: 550px" path="lastName"/>
                 </div>
                 <div class="u-form-email u-form-group u-form-group-3">
                     <label for="email" class="u-label">Email</label>
-                                                    <c:if test="${emailInUse==true}"><div class="errorMessage">This email is already in use :(</div></c:if>
-                                                    <sform:input type="email" cssClass="form-control" id="email" name="email" placeholder="Email"
-                                                           required="" style="max-width: 550px" path="email"/>
+                    <c:if test="${emailInUse==true}"><div class="errorMessage">This email is already in use :(</div></c:if>
+                    <sform:input type="email" cssClass="form-control" id="email" name="email" placeholder="Email"
+                                 required="" style="max-width: 550px" path="email"/>
                 </div>
                 <div class="u-form-group u-form-group-4">
                     <label for="password" class="u-label">Password</label>
-                                                    <input type="password" class="form-control input-sm" id="password" name="password"
-                                                           placeholder="Password" required="" style="max-width: 550px">
+                    <input type="password" class="form-control input-sm" id="password" name="password"
+                           placeholder="Password" required="" style="max-width: 550px">
 
-                      </div>
+                </div>
                 <div class="u-form-group u-form-group-5">
                     <label for="password2" class="u-label">Retype Password</label>
-                                                    <input type="password" class="form-control input-sm" id="password2" name="password2"
-                                                           placeholder="Repeat password" required="" onkeyup="checkPass(); return false;"
-                                                           style="max-width: 550px">
+                    <input type="password" class="form-control input-sm" id="password2" name="password2"
+                           placeholder="Repeat password" required="" onkeyup="checkPass(); return false;"
+                           style="max-width: 550px">
 
-                     </div>
+                </div>
                 <div class="u-form-group u-form-checkbox u-form-group-6">
-<%--                    <label for="" class="u-label">Phone Number</label>--%>
-                                                            <input type="checkbox" required="">I have read and agree to the Terms and Conditions and Privacy Policy.</label>
+                        <%--                    <label for="" class="u-label">Phone Number</label>--%>
+                    <input type="checkbox" required="">I have read and agree to the Terms and Conditions and Privacy Policy.</label>
                 </div>
                 <div class="u-align-left u-form-group u-form-submit">
                     <button id="submitButton" type="submit" class="u-border-2 u-border-black u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-2-light-1 u-none u-radius-50 u-text-black u-text-hover-white u-btn-1">Sign Up</button>

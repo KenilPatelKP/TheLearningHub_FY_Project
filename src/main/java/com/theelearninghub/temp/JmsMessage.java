@@ -1,4 +1,4 @@
-package com.theelearninghub.beans;
+package com.theelearninghub.temp;
 
 import lombok.*;
 

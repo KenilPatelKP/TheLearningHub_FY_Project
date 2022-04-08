@@ -1,7 +1,8 @@
 package com.theelearninghub.controllers;
 
 import com.theelearninghub.beans.*;
-import com.theelearninghub.jms.JmsService;
+import com.theelearninghub.temp.JmsMessage;
+import com.theelearninghub.temp.JmsService;
 import com.theelearninghub.managers.*;
 import com.theelearninghub.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -137,7 +138,7 @@ public class CourseController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String showCoursePage(@PathVariable("id") int courseId, Model model){
 
-        Course currentCourse = courseRepository.getOne(courseId);
+        Course currentCourse = courseRepository.findById(courseId).orElseGet(null);
         User currentUser = userController.getCurrentUser();
         model.addAttribute("currentCourse", currentCourse);
 
@@ -158,7 +159,7 @@ public class CourseController {
             return "coursePage";
         }
 
-        String base64Teacher =
+        String base64Teacher =currentCourse.getCreator().getPhotoBinary() ==null ? "":
                 "data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(currentCourse.getCreator().getPhotoBinary());
         boolean inWishlist = currentUser.getWishes().contains(currentCourse);
         model.addAttribute("currentTeacher",currentCourse.getCreator());
@@ -226,7 +227,7 @@ public class CourseController {
         Course currentCourse = courseRepository.getOne(courseId);
         User currentUser = userController.getCurrentUser();
         model.addAttribute("currentCourse", currentCourse);
-        String base64 =
+        String base64 =currentCourse.getPhotoBinary() ==null ? "":
                 "data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(currentCourse.getPhotoBinary());
         model.addAttribute("currentPhoto", base64);
 
@@ -238,7 +239,7 @@ public class CourseController {
             return "courseChatPage";
         }
 
-        String base64Teacher =
+        String base64Teacher =currentCourse.getCreator().getPhotoBinary() ==null ? "":
                 "data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(currentCourse.getCreator().getPhotoBinary());
         model.addAttribute("currentTeacher",currentCourse.getCreator());
         model.addAttribute("currentTeacherPhoto", base64Teacher);

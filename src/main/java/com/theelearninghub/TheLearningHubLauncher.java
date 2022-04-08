@@ -1,6 +1,6 @@
 package com.theelearninghub;
 
-import com.theelearninghub.jms.JmsService;
+import com.theelearninghub.temp.JmsService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,10 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b5e2d040-6150-4853-a92c-a00f5122d1be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/TheLearningHubLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/TheLearningHubLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/beans/JmsMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/temp/JmsMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/initializers/AdminInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/initializers/CourseInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/initializers/LessonInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/initializers/RoomInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/initializers/UserInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/jms/JmsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/temp/JmsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/jms/JmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/temp/JmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/managers/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/managers/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theelearninghub/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theelearninghub/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/common/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/common/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/common/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/courseChatPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/courseChatPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/coursePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/coursePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/createPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/createPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/enrollCoursePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/enrollCoursePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/errorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/errorPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/myCoursesPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/myCoursesPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/myRoomsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/myRoomsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/profilePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/profilePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/roomsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/roomsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/searchPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/searchPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/signUpPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/signUpPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/jsps/wishlistPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/jsps/wishlistPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/defaultStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/defaultStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/defaultStyles.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/defaultStyles.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/common/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/common/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/common/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/common/leftPanel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/common/leftPanel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/courseChatPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/courseChatPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/coursePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/coursePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/createPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/createPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/enrollCoursePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/enrollCoursePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/errorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/errorPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/myCoursesPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/myCoursesPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/myRoomsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/myRoomsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/profilePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/profilePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/roomsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/roomsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/searchPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/searchPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/signUpPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/signUpPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/wishlistPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsps/wishlistPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/common/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/common/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/common/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/common/leftPanel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/common/leftPanel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/courseChatPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/courseChatPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/coursePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/coursePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/createPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/createPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/enrollCoursePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/enrollCoursePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/errorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/errorPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/myCoursesPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/myCoursesPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/myRoomsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/myRoomsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/profilePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/profilePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/roomsPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/roomsPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/searchPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/searchPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/signUpPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/signUpPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/wishlistPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WEB-INF/jsps/wishlistPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/TheLearningHubLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/TheLearningHubLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/beans/JmsMessage$JmsMessageBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/beans/JmsMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/RoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/initializers/AdminInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/initializers/CourseInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/initializers/LessonInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/initializers/RoomInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/initializers/UserInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/jms/JmsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/jms/JmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/managers/CourseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/managers/CourseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/model/Course$CourseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/model/Course$CourseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/model/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/theelearninghub/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/theelearninghub/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/defaultStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/defaultStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/defaultStyles.less" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/defaultStyles.less" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2646UaRW3n3nMq5pl7RpGnNF5cU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Sem 8\Project_Final_Year\TheLearningHub" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="TheLearningHubLauncher" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -14,5 +142,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5e2d040-6150-4853-a92c-a00f5122d1be" name="Default Changelist" comment="" />
+      <created>1646670527842</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646670527842</updated>
+      <workItem from="1646670531808" duration="1372000" />
+      <workItem from="1646726630287" duration="1845000" />
+      <workItem from="1646799614931" duration="40000" />
+      <workItem from="1646820296832" duration="1688000" />
+      <workItem from="1646929370639" duration="10063000" />
+      <workItem from="1646939690208" duration="180000" />
+      <workItem from="1647011089300" duration="5223000" />
+      <workItem from="1647021042941" duration="1333000" />
+      <workItem from="1647050080723" duration="1933000" />
+      <workItem from="1649350143355" duration="37000" />
+      <workItem from="1649350417362" duration="1654000" />
+      <workItem from="1649388634476" duration="1419000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

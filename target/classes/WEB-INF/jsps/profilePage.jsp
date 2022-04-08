@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>
-    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css">
-    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">
+<%--<html>--%>
+<%--<head>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>--%>
+<%--    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"--%>
+<%--          type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">--%>
 
-    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">
-    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>
-    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>
-    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>
-</head>
-<body ng-app="">
+<%--    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">--%>
+<%--    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>--%>
+<%--</head>--%>
 <jsp:include page="common/header.jsp"></jsp:include>
+<body ng-app="">
 <div class="section tlo">
     <div class="container">
         <div class="row">
@@ -156,7 +156,7 @@
             <h1>Suggested courses:</h1>
         </div>
         <div id="paragraph1" class="row">
-            <div id="owl-demo" class="owl-carousel owl-theme">
+            <div id="owl-demo" class="owl-carousel owl-theme" style="display: block" >
                 <c:choose>
                     <c:when test="${suggested.size()>= 1}">
                         <c:forEach var="i" begin="0" end="${suggested.size()-1}">
@@ -177,6 +177,3 @@
     </div>
 </div>
 <jsp:include page="common/footer.jsp"></jsp:include>
-
-</body>
-</html>

@@ -1,25 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>
-    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css">
-    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">
-    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>
-    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>
-    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>
-</head>
+<%--<html>--%>
+<%--<head>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>--%>
+<%--    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"--%>
+<%--          type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">--%>
+<%--    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>--%>
+<%--</head>--%>
+<jsp:include page="common/header.jsp"></jsp:include>
 <body ng-app=""
       ng-init="creator=(${currentCourse.getCreator().getIduser()}==<sec:authentication property="principal.Id"/>)">
-<jsp:include page="common/header.jsp"></jsp:include>
+
 <div class="section tlo">
     <div class="container">
         <div class="row">
@@ -44,7 +45,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">${currentCourse.getTitle()}
-                            <a ng-show="creator && ${statistics.nrOfEnrolled==0}" data-toggle="modal" data-target="#myDetailsModal"><i class="fa fa-1x fa-edit fa-fw"></i></a></h1>
+                            <a ng-show="creator" data-toggle="modal" data-target="#myDetailsModal"><i class="fa fa-1x fa-edit fa-fw"></i></a></h1>
+                            <a ng-show="creator" data-toggle="modal" data-target="#myDetailsModal"><i class="fa fa-1x fa-edit fa-fw"></i></a></h1>
+<%--                            <a ng-show="creator && ${statistics.nrOfEnrolled==0}" data-toggle="modal" data-target="#myDetailsModal"><i class="fa fa-1x fa-edit fa-fw"></i></a></h1>--%>
                         <p class="text-center">${currentCourse.getDescription()}</p>
                     </div>
                 </div>
@@ -62,7 +65,7 @@
                         </div>
                         <div class="col-md-2" style="display: none" >
                             Go to chat-room
-                            <a href="${pageContext.request.contextPath}/course/${currentCourse.idcourse}/chatRoom"><i class='fa fa-3x fa-fw fa-envelope-o'></i></a>
+                            <a href="${pageContext.request.contextPath}/course/${currentCourse.idcourse}/chatRoom"><i class='fa fa-2x fa-fw fa-envelope-o'></i></a>
                         </div>
                     </div>
                     <br>
@@ -73,15 +76,17 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-1">
-                                            <a ng-show="creator && ${statistics.nrOfEnrolled==0}" href="${pageContext.request.contextPath}/course/${currentCourse.idcourse}/${currentCourse.getLessons().get(i).idlesson}/deleteLesson">
-                                                 <i class="fa fa-3x fa-fw fa-trash-o pull-right "></i></a>
+                                            <a ng-show="creator" href="${pageContext.request.contextPath}/course/${currentCourse.idcourse}/${currentCourse.getLessons().get(i).idlesson}/deleteLesson">
+<%--                                            <a ng-show="creator && ${statistics.nrOfEnrolled==0}" href="${pageContext.request.contextPath}/course/${currentCourse.idcourse}/${currentCourse.getLessons().get(i).idlesson}/deleteLesson">--%>
+                                                 <i class="fa fa-2x fa-fw fa-trash-o pull-right "></i></a>
                                         </div>
                                         <div class="col-md-10">
-                                            <h1>Lesson ${currentCourse.getLessons().get(i).getNumber()}
-                                                - ${currentCourse.getLessons().get(i).getTitle()}</h1>
+                                            <h2>Lesson ${currentCourse.getLessons().get(i).getNumber()}
+                                                - ${currentCourse.getLessons().get(i).getTitle()}</h2>
                                         </div>
                                         <div class="col-md-1">
-                                            <a ng-show="creator && ${statistics.nrOfEnrolled==0}" data-toggle="modal" data-target="#lessonNameModal${i}"><i class="fa fa-3x fa-edit fa-fw"></i></a>
+<%--                                            <a ng-show="creator && ${statistics.nrOfEnrolled==0}" data-toggle="modal" data-target="#lessonNameModal${i}"><i class="fa fa-2x fa-edit fa-fw"></i></a>--%>
+                                            <a ng-show="creator" data-toggle="modal" data-target="#lessonNameModal${i}"><i class="fa fa-2x fa-edit fa-fw"></i></a>
                                         </div>
                                         <table class="table">
                                             <tbody>
@@ -98,7 +103,8 @@
                                                             </td>
                                                             <td>
                                                                 <a href="${pageContext.request.contextPath}/course/${currentCourse.getLessons().get(i).idlesson}/${currentCourse.getLessons().get(i).getMaterials().get(j).idmaterial}/removeMaterial">
-                                                                    <i ng-show="creator && ${statistics.nrOfEnrolled==0}"
+                                                                    <i ng-show="creator"
+<%--                                                                    <i ng-show="creator && ${statistics.nrOfEnrolled==0}"--%>
                                                                        class="-circle-o fa fa-2x fa-close fa-fw pull-right"></i>
                                                                 </a>
                                                             </td>
@@ -304,6 +310,3 @@
 </c:choose>
 
 <jsp:include page="common/footer.jsp"></jsp:include>
-
-</body>
-</html>

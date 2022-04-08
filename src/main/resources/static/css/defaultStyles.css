@@ -1101,12 +1101,12 @@ textarea {
     line-height: inherit;
 }
 a {
-    color: #6d4c41;
+    color:#34495E;
     text-decoration: none;
 }
 a:hover,
 a:focus {
-    color: #3d2b24;
+    color:#5D6D7E;
     text-decoration: underline;
 }
 a:focus {
@@ -1342,7 +1342,7 @@ mark,
     color: #777777;
 }
 .text-primary {
-    color: #6d4c41;
+    color: #000000;
 }
 a.text-primary:hover {
     color: #4d362e;
@@ -3084,8 +3084,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
     color: #ffffff;
-    background-color: #6d4c41;
-    border-color: #5d4137;
+    background-color: #34495E;
+    border-color: #34495E;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3094,8 +3094,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     color: #ffffff;
-    background-color: #4d362e;
-    border-color: #372621;
+    background-color: #5D6D7E ;
+    border-color: #5D6D7E ;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -6785,7 +6785,7 @@ body {
     padding: 0px;
 }
 .h2 {
-    background: #996633;
+    background: #34495E;
     color: #FFF3E0;
     font-size: 25;
 }
@@ -6797,7 +6797,7 @@ body {
     padding: 20px;
 }
 .h3 {
-    background: url(http://localhost:8080/images/wood-texture.jpg);
+    background:#AEB6BF;
     color: #424242;
 }
 .footer {
@@ -6808,10 +6808,10 @@ body {
     color: #43A047;
 }
 .tlo {
-    background: #F5F5F5;
+    background-image: linear-gradient(#e9f2fa, #fbeced) !important;
 }
 .header2 {
-    color: #795548;
+    color: #000000;
 }
 .menuitems {
     font-size: 20px;

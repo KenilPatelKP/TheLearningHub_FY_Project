@@ -1,7 +1,6 @@
-package com.theelearninghub.jms;
+package com.theelearninghub.temp;
 
 
-import com.theelearninghub.beans.JmsMessage;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;

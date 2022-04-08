@@ -70,7 +70,36 @@ public class RoomController {
         List<AbstractMap.SimpleEntry> materials = new ArrayList<>();
         Room currentRoom = roomRepository.getOne(roomId);
         String currentRoomPhoto =
-                "data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(currentRoom.getPhotoBinary());
+                currentRoom.getPhotoBinary() ==null? "":"data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(currentRoom.getPhotoBinary());
+        model.addAttribute("currentRoomPhoto", currentRoomPhoto);
+        model.addAttribute("currentRoom", currentRoom);
+        List<Material> roomsMaterials = currentRoom.getMaterials();
+        for(int i=0; i< roomsMaterials.size(); i++){
+            String base64 = roomsMaterials.get(i).getCreator().getPhotoBinary()==null ? "":"data:image/jpg;base64,"+ Base64.getEncoder().encodeToString((roomsMaterials.get(i).getCreator().getPhotoBinary()));
+            materials.add(new AbstractMap.SimpleEntry(roomsMaterials.get(i), base64));
+        }
+        User currentUser = userController.getCurrentUser();
+        model.addAttribute("userMaterials", currentUser.getMaterials());
+        model.addAttribute("materials", materials);
+        model.addAttribute("inRoom", false);
+        if(currentUser.getRooms().contains(currentRoom)){
+            model.addAttribute("inRoom", true);
+            model.addAttribute("statistics", StatisticBean.builder()
+                    .nrOfEnrolled(currentRoom.getUsers()==null?0:currentRoom.getUsers().size())
+                    .nrOfMessages(currentRoom.getMaterials()==null?0:currentRoom.getMaterials().size())
+                    .popularAmongEnrolled(courseRepository.getPopularCategoryInRoom(currentRoom.getIdroom()))
+                    .build());
+        }
+
+
+        return "roomsPage";
+    }
+   /* @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    private String showRoomPage(@PathVariable("id") int roomId, Model model){
+        List<AbstractMap.SimpleEntry> materials = new ArrayList<>();
+        Room currentRoom = roomRepository.getOne(roomId);
+        String currentRoomPhoto =
+                currentRoom.getPhotoBinary() ==null? "":"data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(currentRoom.getPhotoBinary());
         model.addAttribute("currentRoomPhoto", currentRoomPhoto);
         model.addAttribute("currentRoom", currentRoom);
         List<Material> roomsMaterials = currentRoom.getMaterials();
@@ -93,7 +122,7 @@ public class RoomController {
 
 
         return "roomsPage";
-    }
+    }*/
 
     public List<AbstractMap.SimpleEntry> searchRooms(String phrase) {
         List<AbstractMap.SimpleEntry> roomsMap = new ArrayList<>();

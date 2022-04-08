@@ -102,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
 </head>
-<body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+
 <header class="u-clearfix u-header u-header" id="sec-e67e"><div class="u-clearfix u-sheet u-sheet-1">
     <a href="Home.html" data-page-id="88793668" class="u-image u-logo u-image-1" data-image-width="985" data-image-height="290" title="Home">
         <img src="${pageContext.request.contextPath}/images/The_Learning_Hub_LOGO1.png" class="u-logo-image u-logo-image-1">
@@ -148,3 +148,4 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
     </nav>
 </div></header>
+<%--<body data-home-page="Home.html" data-home-page-title="Home" class="u-body">--%>

@@ -15,7 +15,7 @@
                 My Rooms
             </li>
         </a>
-        <a href="${pageContext.request.contextPath}/course/wishlist">
+        <a href="${pageContext.request.contextPath}/course/wishlist" style="display:none">
             <li class="list-group-item h2">
                 Wishlist
             </li>

@@ -2,25 +2,25 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>
-    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css">
-    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">
-    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>
-    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>
-    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>
+<%--<html>--%>
+<%--<head>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>--%>
+<%--    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"--%>
+<%--          type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">--%>
+<%--    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>--%>
 
-</head>
-<body ng-app="">
+<%--</head>--%>
 <jsp:include page="common/header.jsp"></jsp:include>
+<body ng-app="">
 <div class="section tlo">
     <div class="container">
         <div class="row">
@@ -61,7 +61,7 @@
                                       action="${pageContext.request.contextPath}/room/leaveRoom">
                                     <input type="hidden" name="idRoom" value="${currentRoom.idroom}">
                                     <a onclick="document.getElementById('myForm').submit();"><i
-                                            class="fa fa-3x fa-fw fa-toggle-on"></i></a>
+                                            class="fa fa-2x fa-fw fa-toggle-on"></i></a>
                                 </form>
                                 <h4>Leave room</h4>
                             </div>
@@ -72,7 +72,7 @@
                                       action="${pageContext.request.contextPath}/room/joinRoom">
                                     <input type="hidden" name="idRoom" value="${currentRoom.idroom}">
                                     <a onclick="document.getElementById('myForm').submit();"><i
-                                            class="fa fa-3x fa-fw fa-toggle-off"></i></a>
+                                            class="fa fa-2x fa-fw fa-toggle-off"></i></a>
                                 </form>
                                 <h4>Join room</h4>
                             </div>
@@ -254,6 +254,3 @@
 </div>
 
 <jsp:include page="common/footer.jsp"></jsp:include>
-</body>
-
-</html>

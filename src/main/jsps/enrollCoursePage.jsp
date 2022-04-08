@@ -1,25 +1,25 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.Base64" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>
-    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css">
-    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">
+<%--<html>--%>
+<%--<head>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>--%>
+<%--    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"--%>
+<%--          type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">--%>
 
-    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">
-    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>
-    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>
-    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>
-</head>
-<body ng-app="">
+<%--    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">--%>
+<%--    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>--%>
+<%--    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>--%>
+<%--</head>--%>
 <jsp:include page="common/header.jsp"></jsp:include>
+<body ng-app="">
 <div class="section tlo">
     <div class="container">
         <div class="row">
@@ -40,7 +40,7 @@
                                               action="${pageContext.request.contextPath}/course/removeFromWishlist">
                                             <input type="hidden" name="idCourse" value="${currentCourse.idcourse}">
                                             <a onclick="document.getElementById('myForm').submit();"><i
-                                                    class="fa fa-3x fa-fw fa-heart" style="color: red"></i></a>
+                                                    class="fa fa-2x fa-fw fa-heart" style="color: red"></i></a>
                                         </form>
                                         <h4>Remove from Wishlist</h4>
                                     </div>
@@ -51,7 +51,7 @@
                                               action="${pageContext.request.contextPath}/course/addToWishlist">
                                             <input type="hidden" name="idCourse" value="${currentCourse.idcourse}">
                                             <a onclick="document.getElementById('myForm').submit();"><i
-                                                    class="fa fa-3x fa-fw fa-heart"></i></a>
+                                                    class="fa fa-2x fa-fw fa-heart"></i></a>
                                         </form>
                                         <h4>Add to Wishlist</h4>
                                     </div>
@@ -120,6 +120,3 @@
     </div>
 </div>
 <jsp:include page="common/footer.jsp"></jsp:include>
-
-</body>
-</html>

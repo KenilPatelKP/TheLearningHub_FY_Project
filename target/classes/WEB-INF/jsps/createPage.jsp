@@ -3,18 +3,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>
-    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">
-    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>
-</head>
-<body ng-app="">
+<%--<html>--%>
+<%--<head>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>--%>
+<%--    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">--%>
+<%--    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">--%>
+<%--    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>--%>
+<%--</head>--%>
 <jsp:include page="common/header.jsp"></jsp:include>
+<body ng-app="">
 <div class="section tlo">
     <div class="container">
         <div class="row">
@@ -70,49 +70,49 @@
                         </div>
                     </div>
                     <div ng-hide="!(myVar=='course')">
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <label class="control-label">Category</label>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Category</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <select name="category">
+                                    <option value="Programming">Programming</option>
+                                    <option value="Economics">Economics</option>
+                                    <option value="Computer Networks">Computer Networks</option>
+                                    <option value="Telecommunication">Telecommunication</option>
+                                    <option value="Design">Design</option>
+                                    <option value="Data Bases">Data Bases</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-sm-10">
-                            <select name="category">
-                                <option value="Programming">Programming</option>
-                                <option value="Economics">Economics</option>
-                                <option value="Computer Networks">Computer Networks</option>
-                                <option value="Telecommunication">Telecommunication</option>
-                                <option value="Design">Design</option>
-                                <option value="Data Bases">Data Bases</option>
-                            </select>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Level</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <select name="level">
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <label class="control-label">Level</label>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Syllabus</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input name="syllabus" type="text" class="form-control">
+                            </div>
                         </div>
-                        <div class="col-sm-10">
-                            <select name="level">
-                                <option value="easy">Easy</option>
-                                <option value="medium">Medium</option>
-                                <option value="hard">Hard</option>
-                            </select>
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                                <label class="control-label">Price</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input name="price" type="number" step="0.01" class="form-control" value="0.00" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <label class="control-label">Syllabus</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input name="syllabus" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-2">
-                            <label class="control-label">Price</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input name="price" type="number" step="0.01" class="form-control" value="0.00" required>
-                        </div>
-                    </div>
                     </div>
                     <input name="creatorId" type="hidden" value="<sec:authentication
                                 property="principal.id"/>">
@@ -129,6 +129,3 @@
     <div class="fillScreen"></div>
 </div>
 <jsp:include page="common/footer.jsp"></jsp:include>
-</body>
-
-</html>

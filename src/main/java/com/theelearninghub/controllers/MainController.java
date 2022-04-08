@@ -3,6 +3,7 @@ package com.theelearninghub.controllers;
 import com.theelearninghub.beans.RoomCourseBean;
 import com.theelearninghub.managers.AdminRepository;
 import com.theelearninghub.model.Course;
+import com.theelearninghub.model.PopularCourse;
 import com.theelearninghub.model.User;
 import com.theelearninghub.security.CurrentUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,10 +55,13 @@ public class MainController {
         }
         List<Course> popularCourses = courseController.getPopularCourses(currentUser.getId());
 
-        List<AbstractMap.SimpleEntry> popular = new ArrayList<>();
+        List<PopularCourse> popular = new ArrayList<>();
         for(Course course : popularCourses){
-            String base64 = "data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(course.getPhotoBinary());
-            popular.add(new AbstractMap.SimpleEntry(course, base64));
+            String base64 =
+                    course.getPhotoBinary() ==null? "":"data:image/jpg;base64,"+ Base64.getEncoder().encodeToString(course.getPhotoBinary());
+
+
+            popular.add(new PopularCourse(course.getTitle(),course.getDescription(),course.getIdcourse(),base64));
         }
         model.addAttribute("popular" , popular);
         return "homePage";}

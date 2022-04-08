@@ -1,3 +1,4 @@
+<%@ page import="com.theelearninghub.controllers.UserController" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="f" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>
@@ -82,12 +83,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>The Learning Hub</title>
+    <script src="${pageContext.request.contextPath}/js/angular.min.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/nicepage.css" media="screen">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="${pageContext.request.contextPath}/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/jquery.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/bootstrapFiles/bootstrap.min.js"></script>
+    <link href="${pageContext.request.contextPath}/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="${pageContext.request.contextPath}/css/defaultStyles.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/css/owl.carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/owl.theme.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/carouselHighlited.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/js/owl.carousel.js"></script>
+    <script src="${pageContext.request.contextPath}/js/carouselHighlited.js"></script>
 
 
     <script type="application/ld+json">{
@@ -125,12 +137,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
         </div>
         <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="${pageContext.request.contextPath}/" style="padding: 10px 20px;">Home</a>
+<%--            <%=request.getUserPrincipal() != null ?request.getContextPath()+"/home":request.getContextPath()+"/"%>--%>
+            <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/" style="padding: 10px 20px;">Home</a>
             </li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="about.html" style="padding: 10px 20px;">About</a>
             </li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="contact.html" style="padding: 10px 20px;">Contact</a>
-            </li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="login" style="padding: 10px 20px;">Log In</a>
-            </li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="signUp" style="padding: 10px 20px;">Sign up</a>
-            </li></ul>
+            </li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="<%=request.getUserPrincipal() != null ?"logout":"login"%>" style="padding: 10px 20px;"><%=request.getUserPrincipal() != null ?"Logout":"Login"%></a>
+<%--            </li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="login" style="padding: 10px 20px;">Login</a>--%>
+            </li>
+                <%if(request.getUserPrincipal()==null){%>
+                <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="signUp" style="padding: 10px 20px;">Sign up</a></li>
+                <%}else{%>
+                <li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="<%=request.getContextPath()+"/home"%>" style="padding: 10px 20px;">Dashboard</a></li>
+                <%}%>
+<%--                <% if(new UserController().getCurrentUser().getIduser()>0) {--%>
+<%--                    System.out.println(new UserController().getCurrentUser().getEmail());--%>
+<%--                    System.out.println("you are logged in!");%>--%>
+<%--                <p>Hello World!</p>--%>
+<%--                <%}else{--%>
+<%--                    System.out.println(new UserController().getCurrentUser());--%>
+<%--                    System.out.println("you are not logged in!");--%>
+<%--                }%>--%>
+            </ul>
         </div>
         <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
@@ -139,8 +166,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="" style="padding: 10px 20px;">Home</a>
                     </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="about.html" style="padding: 10px 20px;">About</a>
                     </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="contact.html" style="padding: 10px 20px;">Contact</a>
-                    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login" style="padding: 10px 20px;">Log In</a>
+                    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login" style="padding: 10px 20px;">Login</a>
                     </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="signup" style="padding: 10px 20px;">Sign up</a>
+
                     </li></ul>
                 </div>
             </div>
