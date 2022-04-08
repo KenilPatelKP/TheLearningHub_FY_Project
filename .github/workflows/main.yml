@@ -3,30 +3,16 @@ name: CI/CD counter app
 on:
   push:
     branches: [ main ]
-
 jobs:
-#First we will see the application build or not , then we will deploy in EC2
+
   build:
+    name: Build
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v2
-    
-  Deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v2 
-      - name: Deploy in EC2
-        env:
-            PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY  }}
-            HOSTNAME : ${{ secrets.HOST_DNS  }}
-            USER_NAME : ${{ secrets.USERNAME  }}
-            
-        run: |
-          cd /home/ec2-user/TheLearningHub_FY_Project &&
-          mvn clean build &&
-          sh stop.sh &&
-          sleep 10 &&
-          sh start.sh
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: sh script.sh
